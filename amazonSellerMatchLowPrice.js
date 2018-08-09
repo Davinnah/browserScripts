@@ -10,3 +10,14 @@
 // @license      https://opensource.org/licenses/MIT
 // @copyright    2017-2018 Davinna
 // ==/UserScript==
+
+$(document).ready(function(){
+  'use strict';
+  const $matchLowPrice = $('button span.a-dropdown-prompt:visible');
+  const $saveAll = $('span.a-declarative span.a-button-inner a.a-button-text:visible');
+  
+  $matchLowPrice.click();
+  setTimeout(function(){$saveAll.click()}, 5000);
+  setInterval(function(){location.reload()}, 960000);
+  
+});
