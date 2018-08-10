@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         amazoneSellerMatchLowPrice
 // @namespace    https://greasyfork.org/users/98044
-// @version      0.11
+// @version      0.12
 // @description  Will refresh "Manage  Inventory" page every 16mins, click all "Match Low Price" buttons,
 // @description  then all the "Save" buttons.
 // @author       Davinna
@@ -15,7 +15,7 @@ $(document).ready(function(){
   'use strict';
 
   setInterval(function(){matchLowPrice()}, 60000);
-  setInterval(function(){local.reload()}, 300000);
+  setInterval(function(){local.reload(),console.log('reloaded');}, 300000);
 
 });
 
